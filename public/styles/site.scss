@@ -1,0 +1,141 @@
+// Bootstrap
+// =========
+
+// Bootstrap can be removed entirely by deleting this line.
+
+@import "bootstrap/bootstrap";
+
+// The easiest way to customise Bootstrap variables while
+// being able to easily override the source files with new
+// versions is to override the ones you want in another file.
+//
+// You can also add your own custom variables to this file for
+// use in your site stylesheets.
+
+@import "site/variables";
+
+
+// Site Styles
+// ===========
+
+// Add your own site style includes here
+@import "site/layout";
+
+body {
+    background-color: #151B54
+}
+
+.contentDiv {
+    margin: 0px auto;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: #FFFFFF;
+	width: 100%;
+	text-align: center;
+	font-size: 18px;
+}
+
+.globeSpin {
+    width: 100%;
+    position: relative;
+    h1, h3 {
+        color: white;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+    }
+    h1 {
+        transform: translateY(-100%);
+        font-size: 60px;
+    }
+}
+
+#borderlessPayments {
+    display: flex;
+    padding: 30px 20%;
+    justify-content: center;
+}
+
+#borderlessPaymentsText {
+    flex: 1 1 36%;
+    text-align: left;
+    h2 {
+        color: red;
+        font-weight: bold;
+    }
+}
+
+#borderlessPaymentsImage {
+    flex: 2 1 64%
+}
+
+#futureGlobalBanking {
+    background-color: red;
+    color: white;
+    h2 {
+        font-weight: bold;
+    }
+}
+
+#cards {
+    display: flex;
+    padding: 30px 20%;
+    justify-content: center;
+    .card {
+        margin: 5px;
+        padding: 0px 10px;
+        flex: 1 1 25%;
+        img {
+            max-width: 50%;
+        }
+        h3 {
+            font-weight: bold;
+            padding: 20px 0px;
+        }
+        p {
+            font-size: 16px;
+            padding: 0px 15%;
+        }
+    }
+}
+
+#disclaimer {
+    background-color: red;
+    color: white;
+    font-size: 12px;
+}
+
+#ourClients {
+    background-image: url('../images/ourclients_bg.png');
+    background-size: auto;
+    background-repeat: no-repeat;
+    color: white;
+    h1 {
+        font-weight: bold;
+    }
+    .clients {
+        display: flex;
+        padding: 30px 20%;
+        justify-content: center;
+        .client {
+            img {
+                max-width: 50%;
+            }
+            flex: 1 1 25%;
+            margin: 5px;
+        }
+    }
+}
+
+#banner {
+    background-image: url('../images/banner.png');
+    background-size: auto;
+    background-repeat: no-repeat;
+    color: white;
+    p {
+        width: 20%;
+        margin-left: 20%;
+        padding: 15px 0;
+    }
+}
