@@ -22,7 +22,8 @@
 @import "site/layout";
 
 body {
-    background-color: #151B54
+    background-color: #151B54;
+    font-family: 'eina03';
 }
 
 .contentDiv {
@@ -44,6 +45,7 @@ body {
         top: 50%;
         width: 100%;
         text-align: center;
+        font-weight: bold;
     }
     h1 {
         transform: translateY(-100%);

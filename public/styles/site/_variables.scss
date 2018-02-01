@@ -1,3 +1,47 @@
 // Override Bootstrap variables in this file, e.g.
 
 $font-size-base: 14px;
+
+@font-face {
+    font-family: 'eina03';
+    src: url('../../fonts/eina03-regular.ttf');
+}
+@font-face {
+    font-family: 'eina03';
+    src: url('../../fonts/eina03-regularitalic.ttf');
+    font-style: italic;
+}
+@font-face {
+    font-family: 'eina03';
+    src: url('../../fonts/eina03-light.ttf');
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'eina03';
+    src: url('../../fonts/eina03-lightitalic.ttf');
+    font-weight: 200;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'eina03';
+    src: url('../../fonts/eina03-bold.ttf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'eina03';
+    src: url('../../fonts/eina03-bolditalic.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'eina03';
+    src: url('../../fonts/eina03-semibold.ttf');
+    font-weight: 600;
+
+}
+@font-face {
+    font-family: 'eina03';
+    src: url('../../fonts/eina03-semibolditalic.ttf');
+    font-weight: 600;
+    font-style: italic;
+}
