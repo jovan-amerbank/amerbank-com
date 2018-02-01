@@ -77,7 +77,7 @@ ul.nav.navbar-nav.navbar-left {
 }
 
 #borderlessPaymentsText {
-    flex: 1 1 36%;
+    flex: 1 1 25%;
     text-align: left;
     h2 {
         color: #bd0a31;
@@ -86,7 +86,8 @@ ul.nav.navbar-nav.navbar-left {
 }
 
 #borderlessPaymentsImage {
-    flex: 2 1 64%
+    margin-left: 25px;
+    flex: 3 1 75%
 }
 
 #futureGlobalBanking {

@@ -5927,14 +5927,15 @@ ul.nav.navbar-nav.navbar-left {
   justify-content: center; }
 
 #borderlessPaymentsText {
-  flex: 1 1 36%;
+  flex: 1 1 25%;
   text-align: left; }
   #borderlessPaymentsText h2 {
     color: #bd0a31;
     font-weight: bold; }
 
 #borderlessPaymentsImage {
-  flex: 2 1 64%; }
+  margin-left: 25px;
+  flex: 3 1 75%; }
 
 #futureGlobalBanking {
   background-color: #bd0a31;
