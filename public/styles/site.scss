@@ -141,3 +141,34 @@ body {
         padding: 15px 0;
     }
 }
+
+#blog {
+    background-color: #EEEEEE;
+    h1 {
+        font-weight: bold;
+    }
+    #blogPosts {
+        padding: 30px 20%;
+        display: flex;
+        justify-content: center;
+        .blogPost {
+            background-color: #FFFFFF;
+            flex: 1 1 33%;
+            display: flex;
+            margin: 10px;
+            padding: 15px;
+            img {
+                margin: -15px;
+                flex: 2 1 auto;
+            }
+            .blogText {
+                padding-left: 25px;
+                flex: 3 1 auto;
+                text-align: left;
+                span {
+                    transform: scale(.5, 1);
+                }
+            }
+        }
+    }
+}
