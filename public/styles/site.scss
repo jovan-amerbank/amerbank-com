@@ -22,8 +22,25 @@
 @import "site/layout";
 
 body {
-    background-color: #151B54;
+    background-color: #001a3f;
     font-family: 'eina03';
+}
+
+.navbar {
+    min-height: 100px;
+}
+
+.navbar-header {
+    top: 50%;
+    position: absolute;
+    transform: translateY(-70%);
+}
+
+ul.nav.navbar-nav.navbar-left {
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    right: 30px;
 }
 
 .contentDiv {
@@ -63,7 +80,7 @@ body {
     flex: 1 1 36%;
     text-align: left;
     h2 {
-        color: red;
+        color: #bd0a31;
         font-weight: bold;
     }
 }
@@ -73,7 +90,7 @@ body {
 }
 
 #futureGlobalBanking {
-    background-color: red;
+    background-color: #bd0a31;
     color: white;
     h2 {
         font-weight: bold;
@@ -103,7 +120,7 @@ body {
 }
 
 #disclaimer {
-    background-color: red;
+    background-color: #bd0a31;
     color: white;
     font-size: 12px;
 }
