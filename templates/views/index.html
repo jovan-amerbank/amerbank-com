@@ -3,7 +3,7 @@
 <div class="blogPost">
 	<img src="{{ post._.image.fit(200,200) }}" alt="">
 	<div class="blogText">
-		<span>{{ post._.publishedDate.format("MMMM Do, YYYY") }}</span>
+		<span>{{ post._.publishedDate.format("DD.MM.YYYY.") }}</span>
 		<h4>
 			<a href="/blog/post/{{ post.slug }}">{{ post.title }}</a>
 		</h4>
