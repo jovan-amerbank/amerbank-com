@@ -1,42 +1,74 @@
 {% extends "layouts/default.html" %}
 
 {% block content %}
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-				<article>
-					<p>
-						<a href="/blog">&larr; back to the blog</a>
-					</p>
-					<hr>
-					{% if not data.post %}
-						<h2>Invalid Post.</h2>
-					{% else %}
-						<header>
-							<h1>{{ data.post.title }}</h1>
-							<h5>Posted</h5>
-							{% if data.post.publishedDate %}
-								on {{ data.post._.publishedDate.format("MMMM Do, YYYY") }}
-							{% endif %}
-							{% if data.post.categories and data.post.categories.length %}
-								in
-								{% for cat in data.post.categories %}<a href="/blog/{{ cat.key }}">{{ cat.name }}</a>{% if loop.index < data.post.categories.length %}, {% endif %}{% endfor %}
-											{% endif %}
-							{% if data.post.author %}
-								by {{ data.post.author.name.first }}
-							{% endif %}
-						</header>
-						<div class="post">
-							{% if data.post.image.exists %}
-								<div class="image-wrap">
-									<img src="{{ data.post._.image.fit(750,450) }}" class="img-responsive">
-								</div>
-							{% endif %}
-							{{ data.post.content.full|safe }}
-						</div>
-					{% endif %}
-				</article>
-			</div>
-		</div>
-	</div>
+<div class="page-title text-center blog-title">
+    <div class="container">
+        <h1>Blog</h1>
+        <p>Banking, Lending and Fintech topics</p>
+    </div>
+</div>
+<div class="section">
+    <div class="container">
+        <div class="blog-post">
+            <div class="post col-lg-12 content">
+                {% if data.post.author %}
+                <p><span>by {{ data.post.author.name.first }} 
+                	{% if data.post.publishedDate %}
+						on {{ data.post._.publishedDate.format("MMMM Do, YYYY") }}
+					{% endif %}</span></p>
+				{% elif data.post.publishedDate %}
+						<p><span>on {{ data.post._.publishedDate.format("MMMM Do, YYYY") }}</span></p>
+				{% endif %}
+                <h1>{{ data.post.title }}</h1>
+                {% if data.post.image.exists %}
+					<div class="image-wrap">
+						<img src="{{ data.post._.image.fit(750,450) }}" class="img-responsive">
+					</div><br/>
+				{% endif %}
+				<p>{{ data.post.content.full|safe }}</p>
+            </div>
+
+            <!--<div class="col-lg-4 sidebar">-->
+            <!--    <div class="latest-posts">-->
+            <!--        <header class="text-uppercase">-->
+            <!--            <strong>Latest Blog Posts</strong>-->
+            <!--        </header>-->
+
+            <!--        <div class="sidebar-post">-->
+            <!--            <div class="col-xs-5 no-padding">-->
+            <!--                <a href=""><img class="img-responsive" src="images/blog-post.png" alt="post"></a>-->
+            <!--            </div>-->
+
+            <!--            <div class="col-xs-7">-->
+            <!--                <p><small>June 21, 2018.</small></p>-->
+            <!--                <p>Lorem ipsum</p>-->
+            <!--            </div>-->
+            <!--        </div>-->
+
+            <!--        <div class="sidebar-post">-->
+            <!--            <div class="col-xs-5 no-padding">-->
+            <!--                <a href=""><img class="img-responsive" src="images/blog-post.png" alt="post"></a>-->
+            <!--            </div>-->
+
+            <!--            <div class="col-xs-7">-->
+            <!--                <p><small>June 21, 2018.</small></p>-->
+            <!--                <p>Lorem ipsum</p>-->
+            <!--            </div>-->
+            <!--        </div>-->
+
+            <!--        <div class="sidebar-post">-->
+            <!--            <div class="col-xs-5 no-padding">-->
+            <!--                <a href=""><img class="img-responsive" src="images/blog-post.png" alt="post"></a>-->
+            <!--            </div>-->
+
+            <!--            <div class="col-xs-7">-->
+            <!--                <p><small>June 21, 2018.</small></p>-->
+            <!--                <p>Lorem ipsum</p>-->
+            <!--            </div>-->
+            <!--        </div>-->
+            <!--    </div>-->
+            <!--</div>-->
+        </div>
+    </div>
+</div>
 {% endblock %}

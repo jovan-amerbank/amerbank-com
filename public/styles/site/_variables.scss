@@ -4,44 +4,59 @@ $font-size-base: 14px;
 
 @font-face {
     font-family: 'eina03';
-    src: url('../../fonts/eina03-regular.ttf');
+    src: url('../../fonts/Eina03-Regular.ttf');
 }
 @font-face {
     font-family: 'eina03';
-    src: url('../../fonts/eina03-regularitalic.ttf');
+    src: url('../../fonts/Eina03-RegularItalic.ttf');
     font-style: italic;
 }
 @font-face {
     font-family: 'eina03';
-    src: url('../../fonts/eina03-light.ttf');
+    src: url('../../fonts/Eina03-Light.ttf');
     font-weight: 200;
 }
 @font-face {
     font-family: 'eina03';
-    src: url('../../fonts/eina03-lightitalic.ttf');
+    src: url('../../fonts/Eina03-LightItalic.ttf');
     font-weight: 200;
     font-style: italic;
 }
 @font-face {
     font-family: 'eina03';
-    src: url('../../fonts/eina03-bold.ttf');
+    src: url('../../fonts/Eina03-Bold.ttf');
     font-weight: bold;
 }
 @font-face {
     font-family: 'eina03';
-    src: url('../../fonts/eina03-bolditalic.ttf');
+    src: url('../../fonts/Eina03-BoldItalic.ttf');
     font-weight: bold;
     font-style: italic;
 }
 @font-face {
     font-family: 'eina03';
-    src: url('../../fonts/eina03-semibold.ttf');
+    src: url('../../fonts/Eina03-SemiBold.ttf');
     font-weight: 600;
 
 }
 @font-face {
     font-family: 'eina03';
-    src: url('../../fonts/eina03-semibolditalic.ttf');
+    src: url('../../fonts/Eina03-SemiboldItalic.ttf');
     font-weight: 600;
     font-style: italic;
+}
+
+@font-face {
+    font-family: 'AvenirNextLTPro-Regular';
+    src: url('../../fonts/AvenirNextLTPro-Regular.eot?#iefix') format('embedded-opentype'), url('../../fonts/AvenirNextLTPro-Regular.woff') format('woff'), url('../../fonts/AvenirNextLTPro-Regular.ttf') format('truetype'), url('../../fonts/AvenirNextLTPro-Regular.svg#svgFontName') format('svg');
+}
+
+@font-face {
+    font-family: 'AvenirNextLTPro-Bold';
+    src: url('../../fonts/AvenirNextLTPro-Bold.eot?#iefix') format('embedded-opentype'), url('../../fonts/AvenirNextLTPro-Bold.woff') format('woff'), url('../../fonts/AvenirNextLTPro-Bold.ttf') format('truetype'), url('../../fonts/AvenirNextLTPro-Bold.svg#svgFontName') format('svg');
+}
+
+@font-face {
+    font-family: 'Eina-SemiBold';
+    src: url('../../fonts/eina03-semibold-webfont.eot?#iefix') format('embedded-opentype'), url('../../fonts/eina03-semibold-webfont.woff') format('woff'), url('../../fonts/eina03-semibold-webfont.ttf') format('truetype'), url('../../fonts/eina03-semibold-webfont.svg#svgFontName') format('svg');
 }
