@@ -8,7 +8,7 @@
 
         <div class="pull-left blog-content" style="width: 45%;">
             <div class="date">
-                <p><small>{{ post._.publishedDate.format("DD.MM.YYYY.") }}</small></p>
+                <p><small>{{ post._.publishedDate.format("MMM Do, YYYY.") }}</small></p>
             </div>
 
             <div class="text">
@@ -235,7 +235,7 @@ cities.forEach(function(city) {
 var particles = new THREE.ParticleSystem(geometry, mat);
 
 scene.add(particles);
-
+scene.background = new THREE.Color(0x00193f);
 
 // So that the globe may rotate, setup an animation loop and incrementally rotate
 requestAnimationFrame(function update() {

@@ -1,65 +1,71 @@
 {% extends "layouts/default.html" %}
-
-{% block intro %}
-	<div class="container">
-		<h1>Contact Us</h1>
-	</div>
-{% endblock %}
-
 {% block content %}
-	<div class="container">
-		{% if enquirySubmitted %}
-			<h3>Thanks for getting in touch.</h3>
-		{% else %}
-			<div class="row">
-				<div class="col-sm-8 col-md-6">
-					<form method="post">
-						<input type="hidden" name="action" value="contact">
-						{% set class = ( "has-error" if validationErrors.name else "" ) %}
-						<div class="form-group {{ class }}">
-							<label>
-								<span>Name</span>
-								<input type="text" name="name.full" value="{{ formData["name.full"] }}" class="form-control">
-							</label>
-						</div>
-						{% set class = ( "has-error" if validationErrors.email else "" ) %}
-						<div class="form-group {{ class }}">
-							<label>
-								<span>Email</span>
-								<input type="email" name="email" value="{{ formData.email }}" class="form-control">
-							</label>
-						</div>
-						<div class="form-group">
-							<label>
-								<span>Phone</span>
-								<input type="text" name="phone" value="{{ formData.phone }}" placeholder="(optional)" class="form-control">
-							</label>
-						</div>
-						{% set class = ( "has-error" if validationErrors.enquiryType else "" ) %}
-						<div class="form-group {{ class }}">
-							<label>
-								<span>What are you contacting us about?</span>
-								<select name="enquiryType" class="form-control">
-									<option value="">(select one)</option>
-									{% for type in enquiryTypes %}
-										{% set selected = ( 'selected="selected"' if formData.enquiryType == type.value else "" ) %}
-										<option value="{{type.value}}" {{ selected }}>{{ type.label }}</option>
-									{% endfor %}
-								</select>
-						</div>
-						{% set class = ( "has-error" if validationErrors.message else "" ) %}
-						<div class="form-group {{ class }}">
-							<label>
-								<span>Message</span>
-								<textarea name="message" placeholder="Leave us a message..." rows="4" class="form-control">{{ formData.message }}</textarea>
-							</label>
-						</div>
-						<div class="form-actions">
-							<button type="submit" class="btn btn-primary">Send</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		{% endif %}
-	</div>
+<div class="page-title text-center contact-title">
+    <div class="container">
+        <h1>Contact</h1>
+        <p>Let us answer your questions</p>
+    </div>
+</div>
+<div class="section">
+    <div class="container">
+        <div class="contact-info">
+            <div class="col-md-7 map no-padding">
+                <img class="img-responsive" src="images/amerbank-map.png" alt="map">
+            </div>
+
+            <div class="col-md-5 post">
+                <h1>Amerbank LLC</h1>
+                <p>303 Main Street</p>
+                <p>Savanna, IL 61074</p>
+                <p>(312) 586-2800</p>
+                <p><a href="mailto:contact@amerbank.com">contact@amerbank.com</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="cf-section">
+    <div class="container">
+        <div class="contact-form">
+            {% if enquirySubmitted %}
+                <header class="col-lg-12">
+                    <h1>Thank you for getting in touch.</h1>
+                </header>    
+            {% else %}
+                <header class="col-lg-12">
+                    <h1>Contact Us</h1>
+                </header>
+
+                <form method="POST" action="contact">
+                    <input type="hidden" name="action" value="contact">
+                    <div class="col-lg-6">
+                        <p>First Name</p>
+                        <input type="text" name="name.first" value="{{ formData.name.first }}" class="form-control">
+                
+                        <p>Last Name</p>
+                        <input type="text" name="name.last" value="{{ formData.name.last }}" class="form-control">
+                
+                        <p>Company</p>
+                        <input type="text" name="company" value="{{ formData.company }}" class="form-control">
+                
+                        <p>Email</p>
+                        <input type="email" name="email" value="{{ formData.email }}" class="form-control">
+                
+                        <p>Phone Number</p>
+                        <input type="text" name="phone" value="{{ formData.phone }}" class="form-control">
+                    </div>
+                
+                    <div class="col-lg-6">
+                        <p>Subject</p>
+                        <input type="text" name="subject" value="{{ formData.subject }}" class="form-control">
+                
+                        <p>Your Message</p>
+                        <textarea name="message">{{ formData.message }}</textarea>
+                
+                        <input class="btn" type="submit" value="Send">
+                    </div>
+                </form>
+            {% endif %}
+        </div>
+    </div>
+</div>
 {% endblock %}

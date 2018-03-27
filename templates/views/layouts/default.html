@@ -176,11 +176,14 @@
 		{# The KeystoneJS Content Editor provides support for ks-editable data attributes,
 			which generate links to edit content for users who can access Keystone #}
 		{% if user and user.canAccessKeystone %}
-			<script src="/keystone/js/content/editor.js"></script>
+		<script src="/keystone/js/content/editor.js"></script>
 		{% endif %}
 
 		{# Add scripts that are globally required by your site here. #}
-
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.0/jquery.flexslider.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js"></script>
 		{# Include template-specific javascript files by extending the js block #}
 		{% block js %}{% endblock %}
 	</body>
