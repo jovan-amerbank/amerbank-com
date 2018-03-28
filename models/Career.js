@@ -13,7 +13,7 @@ var Career = new keystone.List('Career', {
 Career.add({
 	title: { type: String, required: true },
 	image: { type: Types.CloudinaryImage },
-	description: {type: Types.Html, wysiwyg: true, height: 200}
+	description: {type: Types.Markdown, wysiwyg: true, height: 200}
 });
 
 Career.schema.virtual('content.full').get(function () {

@@ -1,4 +1,17 @@
 {% extends "layouts/default.html" %}
+{% macro careerItem(career) %}
+    <div class="post">
+        <div class="col-md-4">
+            <img class="img-responsive" src="{{ career._.image.fit('1.0') }}" alt="post">
+        </div>
+
+        <div class="col-md-8">
+            <h1>{{ career.title }}</h1>
+
+            <p>{{ career.description.md }}</p>
+        </div>
+    </div>
+{% endmacro %}
 {% block content %}
 <div class="page-title text-center careers-title">
     <div class="container">
@@ -14,46 +27,14 @@
         </div>
 
         <div class="list">
-            <div class="post">
-                <div class="col-md-4">
-                    <img class="img-responsive" src="images/developer.png" alt="post">
-                </div>
-
-                <div class="col-md-8">
-                    <h1>Full Stack Developer</h1>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
-                </div>
-            </div>
-
-            <div class="post">
-                <div class="col-md-4">
-                    <img class="img-responsive" src="images/aml-specialist.png" alt="post">
-                </div>
-
-                <div class="col-md-8">
-                    <h1>AML Specialist</h1>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
-                </div>
-            </div>
-
-            <div class="post">
-                <div class="col-md-4">
-                    <img class="img-responsive" src="images/payment-specialist.png" alt="post">
-                </div>
-
-                <div class="col-md-8">
-                    <h1>Payment Operations Specialist</h1>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
-                </div>
-            </div>
+            {% if data.careers.length %}
+                {% for career in data.careers %} {{ careerItem(career) }} {% endfor %}
+            {% endif %}
         </div>
 
-        <div class="load-more text-center">
+        <!-- <div class="load-more text-center">
             <a href="#"><strong>Load More...</strong></a>
-        </div>
+        </div> -->
     </div>
 </div>
 {% endblock %}
