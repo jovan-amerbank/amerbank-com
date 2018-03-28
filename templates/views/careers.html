@@ -8,7 +8,7 @@
         <div class="col-md-8">
             <h1>{{ career.title }}</h1>
 
-            <p>{{ career.description.md }}</p>
+            {{ career.description.html|safe }}
         </div>
     </div>
 {% endmacro %}
