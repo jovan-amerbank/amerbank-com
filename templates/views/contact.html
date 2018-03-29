@@ -26,6 +26,7 @@
 <div class="cf-section">
     <div class="container">
         <div class="contact-form">
+            {{ FM.flashMessages(messages) }}
             {% if enquirySubmitted %}
                 <header class="col-lg-12">
                     <h1>Thank you for getting in touch.</h1>
