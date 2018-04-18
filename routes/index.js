@@ -40,6 +40,9 @@ exports = module.exports = function (app) {
 	app.get('/about', routes.views.about);
 	app.get('/careers', routes.views.careers);
 	app.get('/payments', routes.views.payments);
+	app.get('/cards', routes.views.cards);
+	app.get('/fintech', routes.views.fintech);
+	app.get('/loans', routes.views.loans);
 	app.get('/team', routes.views.team);
 	app.all('/contact', routes.views.contact);
 
