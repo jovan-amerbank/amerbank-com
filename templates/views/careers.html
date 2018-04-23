@@ -1,6 +1,6 @@
 {% extends "layouts/default.html" %}
 {% macro careerItem(career) %}
-    <div class="post">
+    <div class="post" id={{ career.title.split(' ').join('') }}>
         <div class="col-md-4">
             <img class="img-responsive" src="{{ career._.image.fit('1.0') }}" alt="post">
         </div>
