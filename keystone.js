@@ -22,7 +22,7 @@ keystone.init({
 	'view engine': '.html',
 	'custom engine': cons.nunjucks,
 
-	'mongo': 'mongodb://jovandamjanovic:mongodb@ds113915.mlab.com:13915/amerbank-interview',
+	'mongo': process.env.MONGODB_URL,
 	'auto update': true,
 	'session': true,
 	'auth': true,
