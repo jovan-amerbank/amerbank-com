@@ -8,6 +8,7 @@ exports = module.exports = function (req, res) {
 
 	// Init locals
 	locals.section = 'blog';
+	locals.title = 'Amerbank - Blog';
 	locals.filters = {
 		category: req.params.category,
 	};

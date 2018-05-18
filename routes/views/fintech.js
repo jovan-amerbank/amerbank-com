@@ -7,7 +7,7 @@ exports = module.exports = function (req, res) {
 
 	// Init locals
 	locals.section = 'fintech';
-
+	locals.title = 'Amerbank - Fintech';
 	// Render the view
 	view.render('fintech');
 };

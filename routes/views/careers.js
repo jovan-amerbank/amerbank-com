@@ -7,6 +7,7 @@ exports = module.exports = function (req, res) {
 	
 	// Init locals
 	locals.section = 'careers';
+	locals.title = 'Amerbank - Careers';
 	locals.data = {
 		careers: [],
 	}
